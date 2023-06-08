@@ -53,11 +53,11 @@ bool stack_is_empty(stack s){
 stack_elem *stack_to_array(stack s){
     stack_elem *arreglo = NULL;    
     if (stack_size(s) > 0){
-       arreglo = calloc(stack_size(s),sizeof(stack_elem));
-       stack i = s; 
-       for(unsigned int e=stack_size(s)-1;i!=NULL;i--){
-       arreglo[e]=i->elem;
-       i=i->next;
+        arreglo = calloc(stack_size(s),sizeof(stack_elem));
+        stack i = s; 
+        for(unsigned int e=stack_size(s)-1;i!=NULL;i--){
+        arreglo[e]=i->elem;
+        i=i->next;
     }
     }
     return arreglo;
